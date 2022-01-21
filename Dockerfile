@@ -13,9 +13,9 @@ RUN chmod +x \
     /usr/local/bin/kubectl \
     && adduser -u $NONROOT_UID -D nonroot $NONROOT_GID \
     && mkdir -p /kubemod-crt \
-    && chmod a+w /kubemod-crt
+    && chmod g+w /kubemod-crt
 
-COPY --chown=nonroot:nonroot files/ kubemod-crt/
+COPY --chown=nonroot:root files/ kubemod-crt/
 
 USER nonroot
 
