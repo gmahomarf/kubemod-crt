@@ -15,7 +15,7 @@ RUN chmod +x \
     && mkdir -p /kubemod-crt \
     && chmod g+w /kubemod-crt
 
-COPY --chown=nonroot:root files/ kubemod-crt/
+COPY --chown=nonroot:nonroot files/ kubemod-crt/
 
 USER nonroot
 
